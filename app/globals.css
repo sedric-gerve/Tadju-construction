@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: theme("colors.bg");
+  color: theme("colors.ink");
+}
+
+.eyebrow {
+  @apply mb-3 text-xs font-bold uppercase tracking-wider text-red;
+}
+
+.section-rule {
+  @apply mt-14 border-t border-ink;
+}
+
+.btn {
+  @apply inline-block rounded-sm border border-transparent px-6 py-3 text-sm font-semibold transition-colors;
+}
+
+.btn-primary {
+  @apply bg-red text-white hover:bg-red-dark;
+}
+
+.btn-outline {
+  @apply border-ink text-ink hover:bg-ink hover:text-white;
+}
+
+.btn-outline-light {
+  @apply border-white text-white hover:bg-white hover:text-red;
+}
