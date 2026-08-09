@@ -1,12 +1,14 @@
-import ImagePlaceholder from "./ImagePlaceholder";
-
 export default function About() {
   return (
     <section id="apropos" className="pt-14">
       <div className="mx-auto grid max-w-site grid-cols-1 gap-8 px-6 md:grid-cols-[1fr_1.2fr] md:items-center">
-        <div className="flex aspect-[4/3] flex-col items-center justify-center gap-2.5 border border-ink bg-panel p-4 text-center text-muted">
-          <ImagePlaceholder className="h-10 w-10" />
-          <span className="text-sm">Dépôt Magloire &amp; Fils — Bafoussam</span>
+        <div className="aspect-[4/3] overflow-hidden border border-ink bg-panel">
+          <img
+            src="/images/produits/hiro.jpg"
+            alt="Dépôt Magloire & Fils à Bafoussam"
+            loading="lazy"
+            className="h-full w-full object-cover"
+          />
         </div>
         <div>
           <p className="eyebrow">À propos</p>
