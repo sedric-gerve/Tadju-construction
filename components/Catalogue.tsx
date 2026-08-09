@@ -1,29 +1,35 @@
-import ImagePlaceholder from "./ImagePlaceholder";
-
 const PRODUCTS = [
   {
     tag: "Agrégats",
     title: "Gravier & Sable",
     description:
       "Gravillons, sable de construction et de remblai, livrés en vrac ou en big bag selon le volume du chantier.",
+    image: "/images/produits/agregats-gravier-sable.jpg",
+    imageAlt: "Gravier et sable de construction empilés sur chantier",
   },
   {
     tag: "Gros œuvre",
     title: "Parpaings",
     description:
       "Blocs standard, blocs d'angle et de chaînage, toutes dimensions courantes, disponibles en stock.",
+    image: "/images/produits/gros-oeuvre-parpaings.jpg",
+    imageAlt: "Parpaings empilés sur chantier",
   },
   {
     tag: "Terrassement",
     title: "Location d'engins & Terrassement",
     description:
       "Pelles, tractopelles et engins de terrassement, avec ou sans opérateur, pour la préparation de vos chantiers.",
+    image: "/images/produits/terrassement-location-engins.jpg",
+    imageAlt: "Engin de terrassement en action",
   },
   {
     tag: "Second œuvre",
     title: "Quincaillerie",
     description:
       "Fers à béton, visserie, outillage et consommables de chantier pour toutes les étapes du gros œuvre.",
+    image: "/images/produits/second-oeuvre-quincaillerie.jpg",
+    imageAlt: "Quincaillerie et outillage de chantier",
   },
 ];
 
@@ -39,8 +45,13 @@ export default function Catalogue() {
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
           {PRODUCTS.map((product) => (
             <article key={product.title} className="flex flex-col">
-              <div className="mb-4 flex aspect-[16/10] items-center justify-center border border-ink bg-panel text-muted">
-                <ImagePlaceholder className="h-10 w-10" />
+              <div className="mb-4 aspect-[16/10] overflow-hidden border border-ink bg-panel">
+                <img
+                  src={product.image}
+                  alt={product.imageAlt}
+                  loading="lazy"
+                  className="h-full w-full object-cover"
+                />
               </div>
               <p className="mb-1.5 text-xs font-bold uppercase tracking-wider text-red">
                 {product.tag}
